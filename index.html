@@ -126,12 +126,12 @@
         }
         .project-details h3 {
             margin: 0;
-            font-size: 1.2em; /* Slightly smaller font size to fit better */
+            font-size: 1.2em;
             color: #00e5ff;
-            white-space: normal; /* Allow text to wrap */
-            overflow: visible; /* Remove overflow hiding */
-            text-overflow: initial; /* Remove ellipsis */
-            line-height: 1.2; /* Improve readability for wrapped text */
+            white-space: normal;
+            overflow: visible;
+            text-overflow: initial;
+            line-height: 1.2;
         }
         .project-details button {
             background: rgba(255, 0, 193, 0.5);
@@ -159,7 +159,6 @@
             color: #00e5ff;
             text-decoration: none;
         }
-        /* Modal styles */
         .modal {
             display: none;
             position: fixed;
@@ -212,7 +211,7 @@
             object-fit: cover;
             border-radius: 5px;
             flex-shrink: 0;
-            cursor: pointer; /* Indicates image is clickable */
+            cursor: pointer;
         }
         .carousel-btn {
             position: absolute;
@@ -267,7 +266,6 @@
         .project-modal-buy:hover {
             background: #ff00c1;
         }
-        /* Image Popup Modal */
         .image-popup-modal {
             display: none;
             position: fixed;
@@ -323,10 +321,10 @@
         </div>
     </div>
 
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search projects...">
-        <button onclick="searchProjects()">Search</button>
-    </div>
+    <form class="search-bar" onsubmit="searchProjects(event)">
+        <input type="text" id="searchInput" placeholder="Search projects..." oninput="searchProjects(event)">
+        <button type="submit">Search</button>
+    </form>
 
     <div class="container">
         <h1 class="main-title">PROJECT STORE</h1>
@@ -478,6 +476,19 @@
             }))
         ];
 
+        // Search functionality
+        function searchProjects(event) {
+            if (event.type === 'submit') {
+                event.preventDefault(); // Prevent form submission from reloading the page
+            }
+            const searchInput = document.getElementById('searchInput').value.toLowerCase();
+            const filteredProjects = projects.filter(project =>
+                project.name.toLowerCase().includes(searchInput) ||
+                project.description.toLowerCase().includes(searchInput)
+            );
+            displayProjects(filteredProjects);
+        }
+
         // Display projects
         function displayProjects(projectList) {
             const container = document.getElementById('projectList');
@@ -496,16 +507,6 @@
                 `;
                 container.appendChild(projectCard);
             });
-        }
-
-        // Search functionality
-        function searchProjects() {
-            const searchInput = document.getElementById('searchInput').value.toLowerCase();
-            const filteredProjects = projects.filter(project =>
-                project.name.toLowerCase().includes(searchInput) ||
-                project.description.toLowerCase().includes(searchInput)
-            );
-            displayProjects(filteredProjects);
         }
 
         // Modal functionality
@@ -534,7 +535,7 @@
                     img.src = src;
                     img.alt = `${project.name} screenshot ${index + 1}`;
                     img.className = 'carousel-image';
-                    img.onclick = () => openImagePopup(src, img.alt); // Add click handler
+                    img.onclick = () => openImagePopup(src, img.alt);
                     carouselInner.appendChild(img);
                 });
                 currentSlide = 0;
@@ -576,9 +577,9 @@
         function handleTouchEnd(event) {
             touchEndX = event.changedTouches[0].clientX;
             if (touchStartX - touchEndX > 50) {
-                nextSlide(); // Swipe left
+                nextSlide();
             } else if (touchEndX - touchStartX > 50) {
-                prevSlide(); // Swipe right
+                prevSlide();
             }
         }
 
