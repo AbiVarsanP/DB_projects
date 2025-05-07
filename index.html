@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -405,7 +406,6 @@
             return gk_fileData[filename] || "";
         }
 
-        // Project data with unique titles, descriptions, and images
         const projects = [
             {
                 id: 1,
@@ -462,18 +462,611 @@
                 ],
                 price: 'Rs.30'
             },
-            // Add remaining projects (6 to 60) with unique data
-            ...Array.from({ length: 55 }, (_, i) => ({
-                id: i + 6,
-                name: `Project ${String.fromCharCode(65 + (i % 26))}${Math.floor(i / 26) + 1}`,
-                description: `Innovative solution for task ${i + 6}. Boost productivity with unique features!`,
+            {
+                id: 6,
+                name: "Story Sharing Platform",
+                description: "A platform where users can share their own stories, and readers can read, share, comment, like, and subscribe to authors. Features include notifications for story actions, collaborative story publishing, and author bio pages with subscriber and story counts.",
                 screenshots: [
-                    `https://placehold.co/600x300?text=Project+${i + 6}+1&font=roboto`,
-                    `https://placehold.co/600x300?text=Project+${i + 6}+2&font=roboto`,
-                    `https://placehold.co/600x300?text=Project+${i + 6}+3&font=roboto`
+                    'https://placehold.co/600x300?text=Story+Sharing+1&font=roboto',
+                    'https://placehold.co/600x300?text=Story+Sharing+2&font=roboto',
+                    'https://placehold.co/600x300?text=Story+Sharing+3&font=roboto'
                 ],
                 price: 'Rs.30'
-            }))
+            },
+            {
+                id: 7,
+                name: "Hospital Management System",
+                description: "A system to manage patient records, appointments, doctor schedules, and treatment details, enabling efficient patient admissions, medical history tracking, and invoice generation for treatments.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Hospital+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Hospital+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Hospital+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 8,
+                name: "Email Platform",
+                description: "A platform to send, receive, reply, forward, and bookmark emails, with notifications for mail opening and filtering by dates and subjects.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Email+Platform+1&font=roboto',
+                    'https://placehold.co/600x300?text=Email+Platform+2&font=roboto',
+                    'https://placehold.co/600x300?text=Email+Platform+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 9,
+                name: "Online Voting System",
+                description: "A system to conduct online polls or surveys, allowing users to create polls, cast votes, and view real-time results.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Online+Voting+1&font=roboto',
+                    'https://placehold.co/600x300?text=Online+Voting+2&font=roboto',
+                    'https://placehold.co/600x300?text=Online+Voting+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 10,
+                name: "Movie Ticket Booking System",
+                description: "A system to book movie tickets online, manage showtimes, select seats, generate tickets, and handle cancellations.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Movie+Booking+1&font=roboto',
+                    'https://placehold.co/600x300?text=Movie+Booking+2&font=roboto',
+                    'https://placehold.co/600x300?text=Movie+Booking+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 11,
+                name: "Real-Time Stock Price Monitor",
+                description: "A system to monitor real-time stock prices across multiple companies and markets, with live updates, price fluctuation tracking, and user-set price alerts.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Stock+Monitor+1&font=roboto',
+                    'https://placehold.co/600x300?text=Stock+Monitor+2&font=roboto',
+                    'https://placehold.co/600x300?text=Stock+Monitor+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 12,
+                name: "Patient Appointment Scheduling",
+                description: "A system to schedule patient appointments with doctors, manage doctor availability, send reminders, and handle cancellations.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Appointment+Scheduling+1&font=roboto',
+                    'https://placehold.co/600x300?text=Appointment+Scheduling+2&font=roboto',
+                    'https://placehold.co/600x300?text=Appointment+Scheduling+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 13,
+                name: "Real-Time Traffic Data Management",
+                description: "A database to manage and monitor real-time traffic data for efficient traffic analysis and optimization.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Traffic+Data+1&font=roboto',
+                    'https://placehold.co/600x300?text=Traffic+Data+2&font=roboto',
+                    'https://placehold.co/600x300?text=Traffic+Data+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 14,
+                name: "Car Rental System",
+                description: "A system to manage car rentals, including car availability, customer bookings, reservations, and billing.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Car+Rental+1&font=roboto',
+                    'https://placehold.co/600x300?text=Car+Rental+2&font=roboto',
+                    'https://placehold.co/600x300?text=Car+Rental+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 15,
+                name: "Vehicle Pre-Booking Application",
+                description: "An application to book vehicles in advance, manage booking details, track reservation status, and ensure efficient fleet management.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Vehicle+Booking+1&font=roboto',
+                    'https://placehold.co/600x300?text=Vehicle+Booking+2&font=roboto',
+                    'https://placehold.co/600x300?text=Vehicle+Booking+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 16,
+                name: "Employee Travel Expense Tracker",
+                description: "A system to track and display total travel expenses for a company or employee across specific days, months, or years, including trip frequency and costs.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Travel+Expense+1&font=roboto',
+                    'https://placehold.co/600x300?text=Travel+Expense+2&font=roboto',
+                    'https://placehold.co/600x300?text=Travel+Expense+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 17,
+                name: "Hostel Management System",
+                description: "A system to manage hosteler attendance, issue out-passes, notify wardens of absences or late returns, and filter hostelers by department, year, or room, with birthday notifications.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Hostel+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Hostel+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Hostel+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 18,
+                name: "Online Polling System",
+                description: "A platform for conducting simple online polls or surveys, enabling users to create polls, vote, and view real-time results.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Online+Polling+1&font=roboto',
+                    'https://placehold.co/600x300?text=Online+Polling+2&font=roboto',
+                    'https://placehold.co/600x300?text=Online+Polling+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 19,
+                name: "Admin-User Login System",
+                description: "A system with admin and user login functionalities to manage access and perform role-based operations.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Login+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Login+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Login+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 20,
+                name: "Temple Darshan Booking",
+                description: "A system to book darshan timing slots for temples, managing user credentials and reservations.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Temple+Booking+1&font=roboto',
+                    'https://placehold.co/600x300?text=Temple+Booking+2&font=roboto',
+                    'https://placehold.co/600x300?text=Temple+Booking+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 21,
+                name: "Personal Document Storage",
+                description: "A system for authenticated users to securely save and manage Aadhar card, voter ID, and education details.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Document+Storage+1&font=roboto',
+                    'https://placehold.co/600x300?text=Document+Storage+2&font=roboto',
+                    'https://placehold.co/600x300?text=Document+Storage+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 22,
+                name: "Micro Climate Data Management",
+                description: "A system to collect, store, and analyze microclimate data (temperature, humidity, wind speed, precipitation) for research, agriculture, and environmental monitoring.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Climate+Data+1&font=roboto',
+                    'https://placehold.co/600x300?text=Climate+Data+2&font=roboto',
+                    'https://placehold.co/600x300?text=Climate+Data+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 23,
+                name: "Book Club Management",
+                description: "A system to manage book club activities, including book selections, meeting schedules, and member discussions.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Book+Club+1&font=roboto',
+                    'https://placehold.co/600x300?text=Book+Club+2&font=roboto',
+                    'https://placehold.co/600x300?text=Book+Club+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 24,
+                name: "Task Management App",
+                description: "A database-driven app to organize and track tasks, with tables for tasks, users, deadlines, and statuses.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Task+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Task+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Task+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 25,
+                name: "Student Information System",
+                description: "A system to store and manage student data, including personal information, academic records, attendance, and grades, with report generation.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Student+Info+1&font=roboto',
+                    'https://placehold.co/600x300?text=Student+Info+2&font=roboto',
+                    'https://placehold.co/600x300?text=Student+Info+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 26,
+                name: "Remote Server Monitoring",
+                description: "A database to monitor and manage remote servers, ensuring efficient server performance tracking.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Server+Monitoring+1&font=roboto',
+                    'https://placehold.co/600x300?text=Server+Monitoring+2&font=roboto',
+                    'https://placehold.co/600x300?text=Server+Monitoring+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 27,
+                name: "Customer Loyalty CRM",
+                description: "A CRM system to manage customer loyalty points and rewards based on purchases and interactions.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=CRM+Loyalty+1&font=roboto',
+                    'https://placehold.co/600x300?text=CRM+Loyalty+2&font=roboto',
+                    'https://placehold.co/600x300?text=CRM+Loyalty+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 28,
+                name: "Voice-Based Transport Info",
+                description: "A hands-free system using voice commands to provide real-time transportation information for buses, trains, flights, or taxis, accessible to all users.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Transport+Info+1&font=roboto',
+                    'https://placehold.co/600x300?text=Transport+Info+2&font=roboto',
+                    'https://placehold.co/600x300?text=Transport+Info+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 29,
+                name: "Employee Attendance System",
+                description: "A system to track employee attendance, leaves, and working hours, automating leave requests and approvals.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Attendance+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Attendance+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Attendance+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 30,
+                name: "E-Commerce Platform",
+                description: "A platform to buy and sell products, with features to view purchase history, search history, and manage wishlists.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=E-Commerce+1&font=roboto',
+                    'https://placehold.co/600x300?text=E-Commerce+2&font=roboto',
+                    'https://placehold.co/600x300?text=E-Commerce+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 31,
+                name: "Blood Bank Management",
+                description: "A system to manage blood donors, recipients, and inventory, ensuring blood safety and processing requests.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Blood+Bank+1&font=roboto',
+                    'https://placehold.co/600x300?text=Blood+Bank+2&font=roboto',
+                    'https://placehold.co/600x300?text=Blood+Bank+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 32,
+                name: "Book Store Management",
+                description: "A system to manage books, customer orders, and inventory, allowing users to browse, order, and track books.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Book+Store+1&font=roboto',
+                    'https://placehold.co/600x300?text=Book+Store+2&font=roboto',
+                    'https://placehold.co/600x300?text=Book+Store+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 33,
+                name: "Small Business Expense Tracker",
+                description: "A system to track business expenses, manage invoices, payments, and receipts, with expense categorization and reporting.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Business+Expense+1&font=roboto',
+                    'https://placehold.co/600x300?text=Business+Expense+2&font=roboto',
+                    'https://placehold.co/600x300?text=Business+Expense+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 34,
+                name: "Fitness Tracker Application",
+                description: "An application to track physical activities, monitor health metrics, set fitness goals, and generate personalized reports.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Fitness+Tracker+1&font=roboto',
+                    'https://placehold.co/600x300?text=Fitness+Tracker+2&font=roboto',
+                    'https://placehold.co/600x300?text=Fitness+Tracker+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 35,
+                name: "Payroll Management System",
+                description: "A system to automate employee salary calculations, deductions, bonuses, tax information, and payslip generation.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Payroll+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Payroll+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Payroll+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 36,
+                name: "Medication Reminder System",
+                description: "A system to create medication schedule reminders, store medication details, and send timely notifications to users.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Medication+Reminder+1&font=roboto',
+                    'https://placehold.co/600x300?text=Medication+Reminder+2&font=roboto',
+                    'https://placehold.co/600x300?text=Medication+Reminder+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 37,
+                name: "Movie Booking Application",
+                description: "An application for registered users to select movies by region, choose seats, and process payments.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Movie+Booking+App+1&font=roboto',
+                    'https://placehold.co/600x300?text=Movie+Booking+App+2&font=roboto',
+                    'https://placehold.co/600x300?text=Movie+Booking+App+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 38,
+                name: "Simple E-Commerce Platform",
+                description: "A platform for small online stores to manage products, customer accounts, orders, payments, and inventory.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=E-Commerce+Platform+1&font=roboto',
+                    'https://placehold.co/600x300?text=E-Commerce+Platform+2&font=roboto',
+                    'https://placehold.co/600x300?text=E-Commerce+Platform+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 39,
+                name: "Contact Management System",
+                description: "A system to store and manage contact information, with features for adding, editing, searching, grouping, and exporting contacts.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Contact+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Contact+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Contact+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 40,
+                name: "Article Sharing Platform",
+                description: "A platform for users to share articles, receive likes and comments, and bookmark articles from others.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Article+Sharing+1&font=roboto',
+                    'https://placehold.co/600x300?text=Article+Sharing+2&font=roboto',
+                    'https://placehold.co/600x300?text=Article+Sharing+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 41,
+                name: "College Event Management",
+                description: "A system to plan, organize, and manage college events, with features for event creation, registration, resource allocation, and participation reports.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Event+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Event+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Event+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 42,
+                name: "Contact Organizer System",
+                description: "A system to efficiently store, manage, and organize contact details, with search, group, and import/export functionalities.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Contact+Organizer+1&font=roboto',
+                    'https://placehold.co/600x300?text=Contact+Organizer+2&font=roboto',
+                    'https://placehold.co/600x300?text=Contact+Organizer+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 43,
+                name: "Task Assignment System",
+                description: "A system to create, assign, and track tasks with deadlines and priorities, including progress tracking and reporting.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Task+Assignment+1&font=roboto',
+                    'https://placehold.co/600x300?text=Task+Assignment+2&font=roboto',
+                    'https://placehold.co/600x300?text=Task+Assignment+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 44,
+                name: "SMS-Based Server Monitoring",
+                description: "A system for administrators to monitor server health and performance remotely via SMS, with alerts for issues and metrics.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Server+Monitoring+SMS+1&font=roboto',
+                    'https://placehold.co/600x300?text=Server+Monitoring+SMS+2&font=roboto',
+                    'https://placehold.co/600x300?text=Server+Monitoring+SMS+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 45,
+                name: "Learning Management System",
+                description: "A system supporting admin, instructor, and student roles to manage courses, content, and progress tracking for educational delivery.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=LMS+1&font=roboto',
+                    'https://placehold.co/600x300?text=LMS+2&font=roboto',
+                    'https://placehold.co/600x300?text=LMS+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 46,
+                name: "Transaction History System",
+                description: "A system for authenticated users to view their transaction history, with user registration for new users.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Transaction+History+1&font=roboto',
+                    'https://placehold.co/600x300?text=Transaction+History+2&font=roboto',
+                    'https://placehold.co/600x300?text=Transaction+History+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 47,
+                name: "Job Portal System",
+                description: "A system to manage job listings, candidate profiles, and applications, enabling job seekers to apply and employers to post vacancies.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Job+Portal+1&font=roboto',
+                    'https://placehold.co/600x300?text=Job+Portal+2&font=roboto',
+                    'https://placehold.co/600x300?text=Job+Portal+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 48,
+                name: "Blogging Website",
+                description: "A mini blogging website for users to create, share, and read blog posts, with commenting and interaction features.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Blogging+Website+1&font=roboto',
+                    'https://placehold.co/600x300?text=Blogging+Website+2&font=roboto',
+                    'https://placehold.co/600x300?text=Blogging+Website+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 49,
+                name: "Notes Application",
+                description: "A notes app allowing users to create, group, and filter notes by title, date, or group, with a bin for deleted notes.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Notes+App+1&font=roboto',
+                    'https://placehold.co/600x300?text=Notes+App+2&font=roboto',
+                    'https://placehold.co/600x300?text=Notes+App+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 50,
+                name: "Recycling Center Management",
+                description: "A database system to manage recycling center operations, including collection routes, material tracking, staff management, and sorting efficiency.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Recycling+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Recycling+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Recycling+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 51,
+                name: "Code Sharing Platform",
+                description: "A platform for users to share and edit code, with access control for authorized users to modify uploaded code.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Code+Sharing+1&font=roboto',
+                    'https://placehold.co/600x300?text=Code+Sharing+2&font=roboto',
+                    'https://placehold.co/600x300?text=Code+Sharing+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 52,
+                name: "Ticket Booking System",
+                description: "A system for authenticated users to book tickets from source to destination, select seats, and process payments.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Ticket+Booking+1&font=roboto',
+                    'https://placehold.co/600x300?text=Ticket+Booking+2&font=roboto',
+                    'https://placehold.co/600x300?text=Ticket+Booking+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 53,
+                name: "POS System Database",
+                description: "A database for a Point of Sale (POS) system to manage retail operations, including sales, inventory, and transactions.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=POS+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=POS+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=POS+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 54,
+                name: "Vehicle Parking Management",
+                description: "A system to manage parking space availability, track vehicle entries/exits, calculate fees, and generate reports.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Parking+Management+1&font=roboto',
+                    'https://placehold.co/600x300?text=Parking+Management+2&font=roboto',
+                    'https://placehold.co/600x300?text=Parking+Management+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 55,
+                name: "Hotel Reservation System",
+                description: "A system to manage room bookings, check-ins, check-outs, pricing, billing, and generate reports on occupancy and revenue.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Hotel+Reservation+1&font=roboto',
+                    'https://placehold.co/600x300?text=Hotel+Reservation+2&font=roboto',
+                    'https://placehold.co/600x300?text=Hotel+Reservation+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 56,
+                name: "Quiz Hosting System",
+                description: "A system for teachers to create and host quizzes, with students participating, viewing ranks, and teachers analyzing performance.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Quiz+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Quiz+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Quiz+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 57,
+                name: "Carbon Emissions Database",
+                description: "A database to monitor and analyze carbon emissions across industries or locations for environmental tracking.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Carbon+Emissions+1&font=roboto',
+                    'https://placehold.co/600x300?text=Carbon+Emissions+2&font=roboto',
+                    'https://placehold.co/600x300?text=Carbon+Emissions+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 58,
+                name: "Vehicle Booking System",
+                description: "An application to pre-book vehicles, manage reservations, and track booking status with real-time updates.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Vehicle+Booking+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Vehicle+Booking+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Vehicle+Booking+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 59,
+                name: "Sports Performance System",
+                description: "A system for teams and athletes to track performance, manage training, monitor health, and analyze strategies.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Sports+System+1&font=roboto',
+                    'https://placehold.co/600x300?text=Sports+System+2&font=roboto',
+                    'https://placehold.co/600x300?text=Sports+System+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            },
+            {
+                id: 60,
+                name: "Voice-Activated Transport Database",
+                description: "A database for a voice-activated system providing real-time transport details for various modes of transportation.",
+                screenshots: [
+                    'https://placehold.co/600x300?text=Transport+Database+1&font=roboto',
+                    'https://placehold.co/600x300?text=Transport+Database+2&font=roboto',
+                    'https://placehold.co/600x300?text=Transport+Database+3&font=roboto'
+                ],
+                price: 'Rs.30'
+            }
         ];
 
         // Search functionality
